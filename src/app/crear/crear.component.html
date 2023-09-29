@@ -1,0 +1,41 @@
+<html>
+<header>
+<div class="subcontainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Creador de tareas</h1>
+            </div>
+        </div>
+    </div>
+
+    <a class="a1" href="/">Volver a Home</a>
+    <a class="a2" href="/listar">Listar Tareas</a>
+</div>
+
+</header>   
+
+<body>
+
+    <h3>Esta pagina sirve para crear tareas, por favor ingrese los datos de la tarea a crear
+    <br>
+    <p class="please">(todos los campos son obligatorios)</p>
+    </h3>
+
+    <form class="create" #dataForm="ngForm" (ngSubmit)="create(dataForm.value)" >
+        <label for="titulo">Titulo:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br>
+        <label for="descripcion">Descripcion:</label><br>
+        <input type="text" id="descripcion" name="descripcion" required><br>
+        <label for="fecha">Fecha:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br>
+        <label for="categoria">Categoria:</label><br>
+        <input type="text" id="categoria" name="categoria" required><br><br>
+        
+        <input type="submit" value="Crear Tarea" >
+
+    </form>
+
+</body>
+
+</html>
